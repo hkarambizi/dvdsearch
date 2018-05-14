@@ -1,0 +1,21 @@
+{
+  "name": "dvdsearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-stylus": "^2.7.0"
+  },
+  "dependencies": {
+    "chart.js": "^2.7.2",
+    "foundation-sites": "^6.4.4-rc1"
+  }
+}

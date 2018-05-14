@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DVD Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+  <link media="all" type="text/css" rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation-float.min.css"> <!-- NOTE: 'foundation-flex' IS DEPRECATED. Must import 'foundation-float.min.css' -->
+  <link media="all" type="text/css" rel="stylesheet" href="css/main.css">
+  <script src="node_modules/chart.js/dist/Chart.js"></script>
+</head>
+<body>
+  <!-- Header Row -->
+  <div class="row">
+    <header>
+      <img src="images/menu.svg" alt="Menu">
+      <input type="text" id="search" placeholder="Search">
+    </header>
+  </div>
+
+  <!-- Content -->
+  <div class="row">
+    <div id="content">
+      <div class="row pad">
+
+        <div class="columns small-12 large-6 medium 6">
+          <h1>Hollywood Titles</h1>
+          <p class="subtitle">Latest Releases</p>
+        </div> <!-- .columns end-->
+
+        <div class="columns small-12 large-6 medium 6">
+          <a href="#" class="btn" id="view-all">View All Releases</a>
+        </div> <!-- .columns end -->
+
+      </div> <!-- .row.pad end-->
+      <div id="thumb-container">
+        <img src="images/thumb.jpg" alt="Thumbnail">
+        <img src="images/thumb.jpg" alt="Thumbnail">
+        <img src="images/thumb.jpg" alt="Thumbnail">
+        <img src="images/thumb.jpg" alt="Thumbnail">
+        <img src="images/thumb.jpg" alt="Thumbnail">
+        <img src="images/thumb.jpg" alt="Thumbnail">
+        <img src="images/thumb.jpg" alt="Thumbnail">
+        <img src="images/thumb.jpg" alt="Thumbnail">
+        <img src="images/thumb.jpg" alt="Thumbnail">
+        <img src="images/thumb.jpg" alt="Thumbnail">
+        <img src="images/thumb.jpg" alt="Thumbnail">
+        <img src="images/thumb.jpg" alt="Thumbnail">
+      </div>
+
+      <div class="row pad">
+        <div class="columns small-12 large-6 medium 6">
+          <h2>New DVD Releases</h2>
+          <p>Lorem ipsum dolor amet tousled gentrify kogi, 8-bit mlkshk actually affogato tofu echo park biodiesel. Skateboard actually schlitz, church-key art party PBR&B normcore freegan godard keytar gentrify. Roof party tote bag flannel, cardigan godard thundercats XOXO kickstarter mustache kogi synth palo santo copper mug disrupt celiac.</p>
+        </div>
+        <div class="columns small-12 large-6 medium 6" id="byweek">
+          <h3>DVD Releases By Week</h3>
+
+          <!-- Chart -->
+          <canvas id="myChart" width="100%" height="50"></canvas>
+          <script>
+          var ctx = document.getElementById("myChart");
+          var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+          labels: ["5/01", "5/08", "5/16", "5/24", "6/02", "5/10"],
+          datasets: [{
+            label: '# of releases',
+            data: [12, 19, 3, 5, 2, 3],
+
+            borderColor: [
+                '#67d2f4'
+            ],
+            borderWidth: 3
+          }]
+          },
+          options: {
+          scales: {
+            yAxes: [{
+                gridLines: {
+                    display:false
+                } 
+            }],
+            xAxes: [{
+                gridLines: {
+                    display:false
+                } 
+            }]
+          }
+          }
+          });
+          </script>
+        </div>
+      </div>
+    </div> <!-- #content end-->
+  </div> <!-- .row end-->
+</body>
+</html>
